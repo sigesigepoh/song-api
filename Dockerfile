@@ -1,5 +1,5 @@
-# Step 1: Use Maven to build the app
-FROM maven:3.8.5-openjdk-17 AS build
+# Use a JDK 21 image if you changed your pom.xml to 21
+FROM eclipse-temurin:21-jdk-jammy AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
